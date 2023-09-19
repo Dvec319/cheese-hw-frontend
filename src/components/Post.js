@@ -14,7 +14,6 @@ function Post ({post}) {
     return <div style={div}>
         <Link to={`/post/${post.id}`}>
             <h1>{post.name}</h1>
-            <h1>{post.country}</h1>
         </Link>
     </div>
 }

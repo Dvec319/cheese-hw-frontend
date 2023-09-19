@@ -18,7 +18,8 @@ function Show(props) {
                 <h2>Update {post.name}!</h2>
                 <Form method="post" action={`/update/${post.id}`}>
                 <input type="text" name="name" placeholder="Name" defaultValue={post.name}/>
-                <input type="text" name="country" placeholder="Country" defaultValue={post.country}/>
+                <input type="text" name="origin_country" placeholder="Country" defaultValue={post.origin_country}/>
+                <input type="text" name='type' placeholder="Type" defaultValue={post.type}/>
                 <button>Update {post.name}!</button>
                 </Form>
                 <Form method="delete" action={`/delete/${post.id}`}>

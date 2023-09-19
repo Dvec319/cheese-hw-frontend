@@ -8,7 +8,8 @@ function Index(props) {
 
     const [formData, setFormData] = useState({
         name: '',
-        country: ''
+        origin_country: '',
+        type: ''
     })
 
     const handleChange = (event) => {
@@ -20,7 +21,8 @@ function Index(props) {
     const handleSubmit = (event => {
         setFormData({
             name: '',
-            country: ''
+            origin_country: '',
+            type: ''
         })
     })
 
@@ -32,8 +34,10 @@ function Index(props) {
             <fieldset>
                 <label for='nameField' style={{textAlign: 'left'}}>Name</label>
                 <input type='text' name='name' placeholder='Name' id='nameField' value={formData.name} onChange={handleChange}/>
-                <label for='countryField' style={{textAlign: 'left'}}>Country</label>
-                <input type='text' name='country' placeholder='Country' id='countryField' value={formData.country} onChange={handleChange}/>
+                <label for='countryField' style={{textAlign: 'left'}}>Origin Country</label>
+                <input type='text' name='origin_country' placeholder='Origin Country' id='countryField' value={formData.origin_country} onChange={handleChange}/>
+                <label for='typeField' style={{textAlign: 'left'}}>Type</label>
+                <input type='text' name='type' placeholder='Type' id='typeField' value={formData.type} onChange={handleChange}/>
                 <button type='submit'>Create the cheese!</button>
             </fieldset>
         </Form>

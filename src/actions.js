@@ -9,7 +9,8 @@ export const createAction = async ({request}) => {
     //construct the new cheese for the api call
     const newCheese = {
         name: formData.get('name'),
-        country: formData.get('country')
+        origin_country: formData.get('origin_country'),
+        type: formData.get('type')
     }
 
     // making a request to create the cheese
@@ -34,7 +35,8 @@ export const updateAction = async ({request, params}) => {
     // building the updated cheese
     const updatedCheese = {
         name: formData.get('name'),
-        country: formData.get('country')
+        origin_country: formData.get('origin_country'),
+        type: formData.get('type')
     }
 
     //making a request to update the cheese
